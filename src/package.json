@@ -1,0 +1,36 @@
+{
+  "name": "ride-ui-kit",
+  "version": "1.0.0",
+  "description": "React component library",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel *.js *.css package.json --out-dir ../dist --copy-files",
+    "watch": "npm-watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "*"
+      ],
+      "extensions": "css, js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RideReport/Ride-UI-Kit.git"
+  },
+  "author": "Devin Sweeting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RideReport/Ride-UI-Kit/issues"
+  },
+  "homepage": "https://github.com/RideReport/Ride-UI-Kit#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.10",
+    "@babel/core": "^7.18.0",
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-react": "^7.17.12",
+    "npm-watch": "^0.11.0"
+  }
+}
