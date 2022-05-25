@@ -1,5 +1,5 @@
 {
-  "name": "ride-ui-kit",
+  "name": "@devsweeting/ride-ui-kit",
   "version": "1.0.0",
   "description": "React component library",
   "main": "index.js",
@@ -18,14 +18,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RideReport/Ride-UI-Kit.git"
+    "url": "git+https://github.com/RideReport/ride-ui-kit.git"
   },
   "author": "Devin Sweeting",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RideReport/Ride-UI-Kit/issues"
+    "url": "https://github.com/RideReport/ride-ui-kit/issues"
   },
-  "homepage": "https://github.com/RideReport/Ride-UI-Kit#readme",
+  "homepage": "https://github.com/RideReport/ride-ui-kit#readme",
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.0",
