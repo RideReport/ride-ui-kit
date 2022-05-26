@@ -9,10 +9,11 @@
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
-    "ride-ui-kit": "file:../dist",
+    "ride-ui-kit": "file:..",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "prestart": "nvm use v16.13.2",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
