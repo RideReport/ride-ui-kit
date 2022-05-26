@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "rollup": "rollup -c",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "prepare": "rm -rf dist && rollup -c"
   },
   "watch": {
     "rollup": {
