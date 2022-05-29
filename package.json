@@ -2,19 +2,18 @@
   "name": "ride-ui-kit",
   "version": "1.0.0",
   "description": "A frontend component library",
-  "main": "dist/cjs/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "rollup": "rollup -c",
-    "watch": "npm-watch",
-    "prepare": "rm -rf dist && rollup -c"
+    "build": "./scripts/build.js",
+    "watch": "npm-watch"
   },
   "watch": {
-    "rollup": {
+    "build": {
       "patterns": [
         "*"
       ],
-      "extensions": "css, js, tsx, ts"
+      "extensions": "scss, js, tsx, ts"
     }
   },
   "repository": {
@@ -28,23 +27,19 @@
   },
   "homepage": "https://github.com/RideReport/ride-ui-kit#readme",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^22.0.0",
-    "@rollup/plugin-node-resolve": "^13.3.0",
-    "@rollup/plugin-typescript": "^8.3.2",
     "@types/react": "^18.0.9",
     "npm-watch": "^0.11.0",
-    "postcss": "^8.4.14",
     "react": "^18.1.0",
-    "rollup": "^2.74.1",
-    "rollup-plugin-dts": "^4.2.2",
-    "rollup-plugin-postcss": "^4.0.2",
+    "sass": "^1.52.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.2"
   },
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
   "engines": {
     "npm": ">=7.0.0",
     "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "recursive-copy": "^2.0.14"
   }
 }

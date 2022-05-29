@@ -1,0 +1,14 @@
+$color: #5075e6;
+
+button {
+    font-size: 20px;
+    color: $color;
+    background-color: green;
+}
+
+
+.rr-shared-button {
+    > * {
+        margin-left: 12px;
+    }
+}
