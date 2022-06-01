@@ -1,0 +1,668 @@
+@use "sass:math";
+/*
+ * Colors are manually kept in sync with Figma
+ * See System Colors in  -> https://www.figma.com/file/DdeJrMgKoQqgisZLrcL25N27/Foundation?node-id=576%3A570
+*/
+
+$white: #ffffff;
+$gray-10: #f0f0f2;
+$gray-30: #dfe3e7;
+$gray-50: #c5cdd4;
+$gray-60: #8797a6;
+$gray-70: #667380;
+$gray-90: #222a35;
+
+$green-00: #f3fbf9;
+$green-10: #9fe5d5;
+$green-30: #57d2b5;
+$green-50: #0ea884;
+$green-70: #0b8568;
+$green-90: #064c3c;
+
+$blue-00: #f5f7fe;
+$blue-10: #b1bbf5;
+$blue-30: #7688ee;
+$blue-50: #3b55e6;
+$blue-70: #293ca1;
+$blue-90: #18225c;
+
+$red-00: #fff5f5;
+$red-10: #ffaead;
+$red-30: #fe7170;
+$red-50: #fe3432;
+$red-70: #b22423;
+$red-90: #661514;
+
+$yellow-00: #fffcf2;
+$yellow-50: #ffc700;
+
+@mixin scrollbar($color: $green-50) {
+    @media screen {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        @include mobile {
+            overflow-y: scroll;
+            overflow-x: hidden;
+        }
+        &::-webkit-scrollbar {
+            width: 6px;
+            background-color: transparent;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $color;
+            border-radius: 6px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+%link {
+    font-weight: bold;
+    cursor: pointer;
+    color: fade-out($gray-10, 0.2);
+    text-decoration: underline;
+    &.active {
+        text-decoration: none;
+        cursor: default;
+        color: $blue-90;
+        transition: color 150ms;
+    }
+    &:hover {
+        color: $blue-70;
+    }
+    &:visited {
+        color: $blue-30;
+    }
+}
+
+/*
+ * This makes an element as invisible as possible without pxoving it from
+ * the accessibility tree.
+ */
+// @mixin visually-hidden {
+//     position: absolute !important;
+//     height: 1px;
+//     width: 1px;
+//     overflow: hidden;
+//     clip: math.rect(1px, 1px, 1px, 1px);
+// }
+
+@mixin transition {
+    transition: all 150ms;
+}
+
+@mixin fill-white {
+    background-color: $white;
+}
+
+@mixin shadow-2 {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1),
+        0px 2px 2px rgba(0, 0, 0, 0.08);
+}
+
+@mixin shadow-hover {
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16),
+        0px 4px 8px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+
+@mixin shadow-8 {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1),
+        0px 4px 8px rgba(0, 0, 0, 0.12);
+}
+@mixin border-bottom-1px {
+    box-shadow: inset 0px -1px 0px #dfe3e7;
+}
+@mixin text-body {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: math.div(3em, 2);
+}
+
+@mixin text-body-tiny {
+    @include text-body;
+    font-size: 12.8px;
+    line-height: 150%;
+}
+
+@mixin text-body-bold {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+}
+@mixin text-link {
+    font-weight: 500;
+}
+@mixin text-body-link {
+    @include text-body;
+    @include text-link;
+}
+@mixin text-label {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.8px;
+    line-height: 150%;
+    letter-spacing: math.div(0.25em, 12.8);
+}
+@mixin text-label-link {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.8px;
+    line-height: 150%;
+}
+@mixin text-label-bold {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12.8px;
+    line-height: 150%;
+    letter-spacing: 0.25px;
+}
+@mixin text-body-link-underlined {
+    @include text-body;
+    @include text-link-underlined;
+}
+@mixin text-link-underlined {
+    @include text-link;
+    @media screen {
+        text-decoration-line: underline;
+    }
+}
+
+@mixin text-body-link-underlined-tiny {
+    @include text-body-link-underlined;
+    font-size: 12.8px;
+    line-height: 150%;
+}
+@mixin text-body-link-disabled {
+    @include text-body-link;
+    color: $gray-60;
+}
+@mixin tooltip {
+    line-height: 12px;
+    padding-top: 6px;
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    @media screen {
+        border-bottom: 1px dashed currentColor;
+    }
+}
+@mixin text-body-tooltip {
+    @include text-body-link;
+    @include tooltip;
+}
+
+@mixin text-caption {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.24px;
+    line-height: 18px;
+}
+@mixin text-caption-bold {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10.24px;
+    line-height: 175.95%;
+}
+@mixin headline-2 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 48.83px;
+    letter-spacing: -0.5px;
+    line-height: 69px;
+}
+@mixin headline-3 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 39.06px;
+    line-height: 55px;
+}
+@mixin headline-4 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 31.25px;
+    line-height: 44px;
+    letter-spacing: -0.25px;
+}
+@mixin headline-5 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: -0.25px;
+}
+
+@mixin headline-6 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: -0.25px;
+}
+
+@mixin subhead {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+@mixin navigation-link {
+    @include text-body-link;
+    transition: color 250ms, background-color 250ms;
+    &:not(.disabled) {
+        &.active {
+            color: $white;
+            background-color: $blue-50;
+        }
+        &:not(.active) {
+            &:hover {
+                background-color: $gray-10;
+            }
+        }
+    }
+    &.disabled {
+        color: $gray-50;
+    }
+}
+@mixin link-border {
+    border: 1px solid $gray-30;
+}
+
+@mixin not-mobile {
+    @media only screen and (min-width: 1189px) {
+        @content;
+    }
+}
+@mixin not-mobile-tiny {
+    @media only screen and (min-width: 839px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media only screen and (max-width: 1188px) {
+        @content;
+    }
+}
+
+@mixin mobile-tiny {
+    @media only screen and (max-width: 840px) {
+        @content;
+    }
+}
+
+@mixin container($color: 'gray') {
+    background: $white;
+    border: 1px solid $gray-30;
+    @if $color == 'blue' {
+        border-color: $blue-50;
+        color: $blue-50;
+        background-color: $blue-00;
+    } @else if $color == 'red' {
+        border-color: $red-50;
+        color: $red-50;
+        background-color: $red-00;
+    } @else if $color == 'green' {
+        border-color: $green-50;
+        color: $green-50;
+        background-color: $green-00;
+    } @else if $color == 'yellow' {
+        border-color: $yellow-50;
+        color: $gray-90;
+        background-color: $yellow-00;
+    }
+    box-sizing: border-box;
+    border-radius: 6px;
+    break-inside: avoid;
+}
+@mixin banner {
+    height: 120px;
+    background: $gray-90;
+    border-radius: 6px;
+    color: $white;
+    @include headline-4;
+    @media print {
+        color: $gray-90;
+    }
+}
+@mixin table {
+    @include text-body;
+    color: $gray-90;
+
+    th,
+    td {
+        vertical-align: middle;
+        &:not(:first-child) {
+            padding-left: 8px;
+        }
+        &:not(:last-child) {
+            padding-right: 8px;
+        }
+    }
+    thead {
+        tr {
+            height: 39px;
+            th {
+                @include text-label;
+                text-align: left;
+                color: $gray-70;
+                vertical-align: middle;
+            }
+        }
+    }
+    tbody {
+        tr {
+            height: 55px;
+        }
+        tr:not(:last-child) {
+            border-bottom: 1px solid $gray-30;
+        }
+        th {
+            @include text-body-bold;
+            text-align: left;
+        }
+    }
+    a {
+        @include text-link-underlined;
+        font-size: 1em;
+        @media screen {
+            color: $blue-50;
+        }
+    }
+
+    td > svg {
+        margin-top: math.div(-2em, 24);
+        margin-bottom: math.div(-7em, 24);
+        font-size: math.div(3em, 2);
+    }
+}
+
+@mixin button {
+    @include text-body-link;
+    @include shadow-2;
+    @include transition;
+    text-align: center;
+    height: 36px;
+    background-color: $white;
+    border: 1px solid $gray-30;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: $gray-90;
+    padding: 6px 12px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &.outline-red {
+        border: 1px solid $red-50;
+        color: $red-50;
+        &:not(:disabled) {
+            &:hover {
+                background-color: $red-50;
+                color: $white;
+            }
+        }
+    }
+    &:not(:disabled) {
+        &:hover {
+            background-color: $gray-30;
+            transform: translate(-1px);
+            @include shadow-8;
+        }
+        &:active {
+            box-shadow: none;
+            transform: none;
+        }
+    }
+    &.blue,
+    &.red {
+        border: 1px solid transparent;
+        color: $white;
+    }
+    &.blue {
+        background-color: $blue-50;
+        &:not(:disabled):hover:not(:active) {
+            background-color: $blue-70;
+            color: $white;
+            @include shadow-hover;
+        }
+    }
+    &.red {
+        background-color: $red-50;
+        &:not(:disabled):hover:not(:active) {
+            background-color: $red-70;
+            color: $white;
+            @include shadow-hover;
+        }
+    }
+    &:disabled {
+        background-color: $gray-30;
+        color: $gray-60;
+        border-color: $gray-30;
+        box-shadow: none;
+    }
+}
+
+@mixin forms-text-field {
+    @include text-body;
+    @include container;
+    display: block;
+    padding: 5px 12px;
+    transition: all 150ms;
+    color: $gray-90;
+    &::placeholder {
+        color: $gray-60;
+    }
+    &:hover {
+        border-color: $gray-60;
+    }
+    &:focus {
+        border-color: $blue-50;
+        &::placeholder {
+            color: $gray-30;
+        }
+    }
+    &.warning:not(.error) {
+        border-color: $yellow-50;
+    }
+    &.error {
+        border-color: $red-50;
+    }
+}
+
+@mixin forms-number-field {
+    @include forms-text-field;
+    padding-right: 2px;
+    padding-left: 8px;
+    transition: 150ms all ease-in-out;
+
+    &:disabled {
+        background-color: $gray-10;
+        border-color: $gray-50;
+        color: $gray-50;
+    }
+}
+
+@mixin donut-chart($fill, $percentage) {
+    $circle-start: -1turn / 8;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    &:after {
+        content: '';
+        width: 200px;
+        height: 200px;
+        border: 40px solid;
+        border-color: rgba(0, 0, 0, 0.12) rgba(0, 0, 0, 0.12) $fill $fill;
+        position: absolute;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        box-sizing: border-box;
+        transform: rotate($circle-start + ($percentage / 100 * 0.5turn));
+        animation: fillAnimation 1s ease-out;
+    }
+    @-webkit-keyframes fillAnimation {
+        0% {
+            transform: rotate($circle-start);
+        }
+    }
+
+    @keyframes fillAnimation {
+        0% {
+            transform: rotate($circle-start);
+        }
+    }
+}
+
+.tippy-box[data-theme~='ride-report-dark'] {
+    border-radius: 3px;
+    background-color: $gray-90;
+    color: $white;
+    padding: 8px;
+}
+
+@mixin blinking-animation {
+    -webkit-animation: 1s blink ease 3;
+    -moz-animation: 1s blink ease 3;
+    animation: 1s blink ease 3;
+    animation-delay: 1s;
+
+    @-moz-keyframes blink {
+        from,
+        to {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes blink {
+        from,
+        to {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes blink {
+        from,
+        to {
+            opacity: 1;
+        }
+        50% {
+            opacity: 0;
+        }
+    }
+}
+
+/*
+----------- TOGGLES -----------
+
+A toggle is an input of type "check" or "radio" that has had the native box
+hidden and replaced with a custom-styled one of our own.
+
+For accessibility reasons, we need to insure that there is a real (hidden) input
+that is driving all of the states, which is why there's all this effort to make
+all the selectors start from the input element.
+*/
+
+/*
+Toggles can be re-themed to match certain colors (such as operator colors), and
+use the following three css variables to determine color.
+
+CSS variables are scoped by parents and determined at runtime. Here we place
+the default colors in html so all children have access to them.
+*/
+html {
+    --ride-report-inactive-toggle-color: #{$gray-70};
+    --ride-report-active-toggle-color: #{$blue-50};
+    --ride-report-hover-toggle-color: #{$blue-30};
+}
+
+/*
+Fetching a nonexistent CSS variable won't throw any errors, which can make
+debugging confusing. You can use these sass variables instead, which will
+complain at compile-time if you make a typo.
+*/
+$inactive-toggle: var(--ride-report-inactive-toggle-color);
+$active-toggle: var(--ride-report-active-toggle-color);
+$hover-toggle: var(--ride-report-hover-toggle-color);
+
+/*
+There's one part of the toggle that works nearly consistently between all of,
+them but that part might be the whole label itself, a div inside it, or
+an :after element.
+
+Giving a selector that describes how to find it starting from the input
+(like ' + label' or ' + label > svg'), this will set that input up with all the
+default styles, including for :focus, :hover, :checked, :disabled states.
+*/
+@mixin toggle-defaults($location-from-input) {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    & + label {
+        @include text-body-link;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        color: $gray-90;
+        user-select: none;
+        position: relative;
+    }
+    &#{$location-from-input} {
+        transition: 150ms all;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        background-color: $white;
+        border: 1px solid $inactive-toggle;
+        font-size: 20px;
+        margin-right: 8px;
+    }
+    &:not(:disabled) {
+        &:hover,
+        &:focus {
+            &#{$location-from-input} {
+                box-shadow: 0px 0px 4px $hover-toggle;
+            }
+            &:not(:checked)#{$location-from-input} {
+                border-color: $hover-toggle;
+            }
+        }
+    }
+    &:checked#{$location-from-input} {
+        border-color: transparent;
+        background-color: $active-toggle;
+    }
+    &:disabled#{$location-from-input} {
+        border-color: transparent;
+        background-color: $gray-30;
+    }
+}

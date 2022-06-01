@@ -23,13 +23,13 @@
 
 ## About The Project
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The Ride-UI-Kit is a shared front end component library that is used across all of Ride Report front end repositories.
 
-Here's why:
+It includes:
 
-- Your time should be focused on creating something amazing. A project that solves a problem and helps others
-- You shouldn't be doing the same tasks over and over like creating a README from scratch
-- You should implement DRY principles to the rest of your life :smile:
+- Commonly used React Components (buttons and charts)
+- Assets (logos and svgs)
+- Whatever else you can think of!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -37,12 +37,27 @@ Here's why:
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To import the library into your project, we install via npm through the Github Repo URL.
+
+```
+npm install git@github.com:RideReport/ride-ui-kit/src.git#main
+```
+
+Then you can import it as you would with any other component using ES6 syntax:
+
+```
+import { Button } from 'ride-ui-kit';
+
+function Example() {
+    return <Button label={'omg it worked'} />
+}
+```
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+Node
+NPM
+maybe include nodeversion manager? -> create-react-app requires a higher version of node than the component library
 
 - npm
   ```sh
@@ -54,29 +69,29 @@ This is an example of how to list things you need to use the software and how to
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   ```
+   git clone https://github.com/RideReport/ride-ui-kit.git
    ```
 2. Install NPM packages
-   ```sh
+   ```
    npm install
+   ```
+3. Run Rollup to build the dist files
+   ```
+   npm run rollup
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Developing in Watch Mode
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+You can develop components within the repository using a ver ybasic react app that imports the package locally.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
+1. From the top-level of the project run `npm run watch`
+2. Open up a new project terminal window and from the root `cd demo`
+3. Start the react app with `npm run start`
+
+Every time you make changes within the component library it should be automatically rebundled by rollup and served to the react app for hot reloading effects.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
