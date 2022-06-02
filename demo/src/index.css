@@ -3,17 +3,17 @@
   font-style: normal;
   font-weight: 700;
   src: local('PT Mono'), local('PT-Mono'),
-      url(./../../src/assets/fonts/PTMono-Regular.woff) format('woff2'),
-      url(./../../src/assets/fonts/PTMono-Regular.woff) format('woff');
+      url(./../node_modules/ride-ui-kit/dist/public/assets/fonts/PTMono-Regular.woff2) format('woff2'),
+      url(./../node_modules/ride-ui-kit/dist/public/assets/fonts/PTMono-Regular.woff) format('woff');
 }
 
 body {
+  margin: 0;
   font-family: Work Sans, 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
-  width: 100vh;
 }
 
 code {

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Button.scss";
 import cx from "classnames";
+import Icon, { IconName } from "../Icons/Icon";
 
 export type ButtonProps = {
   /** What text to render inside the button */
@@ -10,7 +11,7 @@ export type ButtonProps = {
   color?: "red" | "blue" | "gray" | "outline-red";
 
   /** The icon to show to the left of the text, if any. */
-  // icon?: IconName;
+  icon?: IconName;
   className?: string;
   loading?: boolean;
   disabled?: boolean;
@@ -38,7 +39,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       loading = false,
       center = false,
       iconPosition = "left",
-      // icon,
+      icon,
       style,
       type = "button",
     }: ButtonProps,
@@ -50,13 +51,16 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         onClick={onClick}
         disabled={disabled || loading}
-        className={cx(styles.button, styles[color], iconPosition, {
-          center: center,
-        })}
+        className={cx(
+          styles.button,
+          styles[color],
+          iconPosition && styles[iconPosition],
+          center && styles.center
+        )}
         style={style}
       >
         {/* <Loading loading={loading} kind="blue" size={2} /> */}
-        {/* {icon ? <Icon icon={icon} /> : null} */}
+        {icon ? <Icon icon={icon} /> : null}
         {children ? <span>{children}</span> : null}
       </button>
     );

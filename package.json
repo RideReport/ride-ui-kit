@@ -5,6 +5,7 @@
   "main": "dist/cjs/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --outDir dist/lib --declarationDir dist/types --declaration true && rollup -c",
     "rollup": "rollup -c",
     "watch": "rollup -c --watch"
   },
@@ -23,6 +24,7 @@
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.2",
     "@types/react": "^18.0.9",
+    "@types/uuid": "^8.3.4",
     "postcss": "^8.4.14",
     "react": "^18.1.0",
     "rollup": "^2.74.1",
@@ -43,6 +45,8 @@
     "node-sass": "^7.0.1",
     "rollup-plugin-copy": "^3.4.0",
     "rollup-plugin-postcss-modules": "^2.0.2",
-    "sass": "^1.52.1"
+    "rollup-plugin-svg": "^2.0.0",
+    "sass": "^1.52.1",
+    "uuid": "^8.3.2"
   }
 }

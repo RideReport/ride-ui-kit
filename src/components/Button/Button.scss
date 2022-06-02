@@ -1,8 +1,7 @@
-@import "./../../variables";
+@import "./../../assets/styles/variables.scss";
 
 
 @mixin button {
-    @include text-body-tiny;
     @include shadow-2;
     @include transition;
     text-align: center;
