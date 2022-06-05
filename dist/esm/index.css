@@ -1,0 +1,140 @@
+/*
+ * Colors are manually kept in sync with Figma
+ * See System Colors in  -> https://www.figma.com/file/DdeJrMgKoQqgisZLrcL25N27/Foundation?node-id=576%3A570
+*/
+/*
+ * This makes an element as invisible as possible without pxoving it from
+ * the accessibility tree.
+ */
+.Button_tippy-box__abVwz[data-theme~=ride-report-dark] {
+  border-radius: 3px;
+  background-color: #222a35;
+  color: #ffffff;
+  padding: 8px;
+}
+
+/*
+----------- TOGGLES -----------
+
+A toggle is an input of type "check" or "radio" that has had the native box
+hidden and replaced with a custom-styled one of our own.
+
+For accessibility reasons, we need to insure that there is a real (hidden) input
+that is driving all of the states, which is why there's all this effort to make
+all the selectors start from the input element.
+*/
+/*
+Toggles can be re-themed to match certain colors (such as operator colors), and
+use the following three css variables to determine color.
+
+CSS variables are scoped by parents and determined at runtime. Here we place
+the default colors in html so all children have access to them.
+*/
+html {
+  --ride-report-inactive-toggle-color: #667380;
+  --ride-report-active-toggle-color: #3b55e6;
+  --ride-report-hover-toggle-color: #7688ee;
+}
+
+/*
+Fetching a nonexistent CSS variable won't throw any errors, which can make
+debugging confusing. You can use these sass variables instead, which will
+complain at compile-time if you make a typo.
+*/
+/*
+There's one part of the toggle that works nearly consistently between all of,
+them but that part might be the whole label itself, a div inside it, or
+an :after element.
+
+Giving a selector that describes how to find it starting from the input
+(like ' + label' or ' + label > svg'), this will set that input up with all the
+default styles, including for :focus, :hover, :checked, :disabled states.
+*/
+.Button_button__2JA4L {
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-size: 12.8px;
+  line-height: 150%;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.08);
+  transition: all 150ms;
+  text-align: center;
+  height: 36px;
+  background-color: #ffffff;
+  border: 1px solid #dfe3e7;
+  border-radius: 6px;
+  box-sizing: border-box;
+  color: #222a35;
+  padding: 6px 12px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap;
+  pointer-events: auto;
+}
+.Button_button__2JA4L.Button_outline-red__Uemck {
+  border: 1px solid #fe3432;
+  color: #fe3432;
+}
+.Button_button__2JA4L.Button_outline-red__Uemck:not(:disabled):hover {
+  background-color: #fe3432;
+  color: #ffffff;
+}
+.Button_button__2JA4L:not(:disabled):hover {
+  background-color: #dfe3e7;
+  transform: translate(-1px);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.12);
+}
+.Button_button__2JA4L:not(:disabled):active {
+  box-shadow: none;
+  transform: none;
+}
+.Button_button__2JA4L.Button_blue__IypMu, .Button_button__2JA4L.Button_red__d0oaQ {
+  border: 1px solid transparent;
+  color: #ffffff;
+}
+.Button_button__2JA4L.Button_blue__IypMu {
+  background-color: #3b55e6;
+}
+.Button_button__2JA4L.Button_blue__IypMu:not(:disabled):hover:not(:active) {
+  background-color: #293ca1;
+  color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+.Button_button__2JA4L.Button_red__d0oaQ {
+  background-color: #fe3432;
+}
+.Button_button__2JA4L.Button_red__d0oaQ:not(:disabled):hover:not(:active) {
+  background-color: #b22423;
+  color: #ffffff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16), 0px 4px 8px rgba(0, 0, 0, 0.08), 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
+.Button_button__2JA4L:disabled {
+  background-color: #dfe3e7;
+  color: #8797a6;
+  border-color: #dfe3e7;
+  box-shadow: none;
+}
+.Button_button__2JA4L svg {
+  margin-right: 4px;
+  font-size: 20px;
+}
+.Button_button__2JA4L svg:last-child {
+  margin: 2px -6px;
+}
+.Button_button__2JA4L.Button_center__NFqdL {
+  justify-content: center;
+}
+.Button_button__2JA4L.Button_right__nPCiD {
+  flex-direction: row-reverse;
+}
+@media print {
+  .Button_button__2JA4L {
+    display: none;
+  }
+}
