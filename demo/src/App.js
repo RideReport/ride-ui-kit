@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Button } from "ride-ui-kit";
+import { Button, Checkbox } from "ride-ui-kit";
 import { Icon } from "ride-ui-kit";
 import { Toggle } from "ride-ui-kit";
+import logo from "ride-ui-kit/dist/public/assets/logo.svg";
 
 function App() {
   const [demoToggle, setDemoToggle] = useState(false);
@@ -10,7 +11,16 @@ function App() {
   return (
     <div className={"App"}>
       <div className="container">
-        <h1>Ride-UI-Kit</h1>
+        <div className="header">
+          <img
+            alt="Ride Report"
+            src={logo}
+            class="logo full"
+            style={{ marginRight: "-162px", height: "42px" }} //Why is this huge gap to the right of the logo here
+          />
+          <h1>Ride-UI-Kit</h1>
+        </div>
+
         <p>A front end component library for Ride Report</p>
         <h2 className="section-header">Icons</h2>
         <div className={"section"}>
@@ -30,7 +40,7 @@ function App() {
             Disabled Button
           </Button>
           <Button
-            icon={"Check"}
+            icon={"Camera"}
             color={"gray"}
             onClick={() => console.log("button pressed")}
           >
@@ -50,7 +60,7 @@ function App() {
           </Button>
         </div>
 
-        <h2 className="section-header">Toggle</h2>
+        <h2 className="section-header">Toggles</h2>
         <div className={"section-flex"}>
           <Toggle
             checked={demoToggle}
@@ -61,6 +71,12 @@ function App() {
             checked={false}
             onChange={() => setDemoToggle(!demoToggle)}
             label={"Disabeled"}
+            disabled
+          />
+          <Checkbox
+            checked={false}
+            onChange={() => setDemoToggle(!demoToggle)}
+            label={"Checkbox"}
             disabled
           />
         </div>

@@ -5,6 +5,7 @@ import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import copy from "rollup-plugin-copy";
 import svg from "rollup-plugin-svg";
+// import url from "@rollup/plugin-url";
 
 const packageJson = require("./package.json");
 
@@ -32,6 +33,7 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       svg(),
+      // url(),
       postcss({
         modules: true,
         extract: false,

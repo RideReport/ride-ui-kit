@@ -142,6 +142,8 @@ const HALF_ICONS: IconName[] = [
  * determined by the parent's font size, and the color by the font color.
  */
 function Icon({ icon, style, className = "" }: Props) {
+  console.log(`${icons}#icon-${icon}`);
+  console.log(`svg contents: ${icons}`);
   return (
     <svg
       className={cx(styles.icon, className, {
@@ -149,7 +151,7 @@ function Icon({ icon, style, className = "" }: Props) {
       })}
       style={style}
     >
-      <use xlinkHref={`./../../assets/svgs/icons.svg#icon-${icon}`} />
+      <use xlinkHref={`${icons}#icon-${icon}`} />
     </svg>
   );
 }

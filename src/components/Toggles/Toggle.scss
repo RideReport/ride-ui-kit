@@ -137,3 +137,25 @@ default styles, including for :focus, :hover, :checked, :disabled states.
         background-color: $white;
     }
 }
+
+
+.checkbox {
+    $checkbox-path: ' + label > :first-child';
+
+    @include toggle-defaults($checkbox-path);
+
+    &#{$checkbox-path} {
+        width: 20px;
+        height: 20px;
+        svg {
+            color: white;
+        }
+    }
+
+    &:not(:checked):disabled#{$checkbox-path} svg {
+        color: transparent;
+    }
+}
+.checkbox-wrapper {
+    position: relative;
+}

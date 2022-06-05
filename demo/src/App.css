@@ -6,6 +6,11 @@
   flex-direction: column;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+}
+
 .section-header {
   border-bottom: 1px solid black;
   line-height: 36px;
