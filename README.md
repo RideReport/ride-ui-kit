@@ -27,8 +27,8 @@ The Ride-UI-Kit is a shared front end component library that is used across all 
 
 It includes:
 
-- Commonly used React Components (buttons and charts)
-- Assets (logos and svgs)
+- Commonly used React Components (buttons, charts, etc)
+- Assets (logos, svgs, fonts)
 - Whatever else you can think of!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -57,7 +57,7 @@ function Example() {
 
 Node
 NPM
-maybe include nodeversion manager? -> create-react-app requires a higher version of node than the component library
+Node version manager? -> create-react-app requires a higher version of node than the component library
 
 - npm
   ```sh
@@ -94,16 +94,6 @@ You can develop components within the repository using a ver ybasic react app th
 Every time you make changes within the component library it should be automatically rebundled by rollup and served to the react app for hot reloading effects.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- USAGE EXAMPLES -->
-
-## Using in Projects
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-```
-npm install ___
-```
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
