@@ -28,6 +28,7 @@
   "homepage": "https://github.com/RideReport/ride-ui-kit#readme",
   "devDependencies": {
     "@types/react": "^18.0.9",
+    "@types/uuid": "^8.3.4",
     "npm-watch": "^0.11.0",
     "react": "^18.1.0",
     "sass": "^1.52.1",
@@ -40,6 +41,7 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "recursive-copy": "^2.0.14"
+    "recursive-copy": "^2.0.14",
+    "uuid": "^8.3.2"
   }
 }

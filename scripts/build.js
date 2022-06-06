@@ -6,9 +6,14 @@ const copy = require("recursive-copy");
 
 async function main() {
   const tsc = exec("./node_modules/typescript/bin/tsc");
-  const copyCss = copy("src", "dist", { filter: ["**/*.scss"] });
+  const copyCss = copy("src", "dist", {
+    filter: ["**/*.scss"],
+    overwrite: true,
+  });
+  const copyAssets = copy("src/assets", "dist/assets");
   await tsc;
   await copyCss;
+  await copyAssets;
 }
 
 main().catch((err) => {
