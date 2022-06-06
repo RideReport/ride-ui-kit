@@ -71,15 +71,6 @@ function App() {
             label={"Checkbox"}
           />
         </div>
-        <h2 className="section-header">Selects</h2>
-        <div className={"section-flex"}>
-          {/* <VehicleClassPicker
-            vehicleClasses={VEHICLE_CLASS_OPTIONS}
-            onChange={(vc: string) => setVehicleType(vc)}
-            value={vehicleType}
-          /> */}
-          <code>WIP</code>
-        </div>
         <h2 className="section-header">Charts</h2>
         We use recharts (add documention link) as our main charting library. It
         accepts the data format:

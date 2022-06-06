@@ -1,7 +1,0 @@
-@import "./../../assets/styles/variables.scss";
-
-// most styling of internals should be done via methods described here
-// https://react-select.com/styles
-.select {
-    @include text-label
-}

@@ -97,4 +97,6 @@ Every time you make changes within the component library it should be automatica
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
+<p> Write docs on how to commit the /dist file and why we do it. </p>
+
 <p align="right">(<a href="#top">back to top</a>)</p>
