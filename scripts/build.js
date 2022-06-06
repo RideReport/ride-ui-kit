@@ -10,7 +10,7 @@ async function main() {
     filter: ["**/*.scss"],
     overwrite: true,
   });
-  const copyAssets = copy("src/assets", "dist/assets");
+  const copyAssets = copy("src/assets", "dist/assets", { overwrite: true });
   await tsc;
   await copyCss;
   await copyAssets;

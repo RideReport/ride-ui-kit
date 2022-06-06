@@ -5,13 +5,13 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && ./scripts/build.js",
+    "build": "./scripts/build.js",
     "watch": "npm-watch"
   },
   "watch": {
     "build": {
       "patterns": [
-        "*"
+        "src"
       ],
       "extensions": "scss, js, tsx, ts"
     }
