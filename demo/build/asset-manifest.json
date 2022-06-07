@@ -1,17 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5bfa5c8a.css",
-    "main.js": "/static/js/main.b982b184.js",
-    "static/media/icons.svg": "/static/media/icons.1d18224125a98f1314349414e8c8030b.svg",
-    "static/media/PTMono-Regular.woff": "/static/media/PTMono-Regular.b7423ac47c4163445b22.woff",
-    "static/media/PTMono-Regular.woff2": "/static/media/PTMono-Regular.0ff167fdc7ea29db9043.woff2",
-    "static/media/logo.svg": "/static/media/logo.7fefac84b046a4e34dbf1491d0955994.svg",
-    "index.html": "/index.html",
-    "main.5bfa5c8a.css.map": "/static/css/main.5bfa5c8a.css.map",
-    "main.b982b184.js.map": "/static/js/main.b982b184.js.map"
+    "main.css": "/ride-ui-kit/static/css/main.5e32c2a8.css",
+    "main.js": "/ride-ui-kit/static/js/main.e4fa787b.js",
+    "static/media/icons.svg": "/ride-ui-kit/static/media/icons.1d18224125a98f1314349414e8c8030b.svg",
+    "static/media/ride_report.png": "/ride-ui-kit/static/media/ride_report.69e284c81a46ec745bbc.png",
+    "static/media/PTMono-Regular.woff": "/ride-ui-kit/static/media/PTMono-Regular.b7423ac47c4163445b22.woff",
+    "static/media/PTMono-Regular.woff2": "/ride-ui-kit/static/media/PTMono-Regular.0ff167fdc7ea29db9043.woff2",
+    "static/media/logo.svg": "/ride-ui-kit/static/media/logo.7fefac84b046a4e34dbf1491d0955994.svg",
+    "index.html": "/ride-ui-kit/index.html",
+    "main.5e32c2a8.css.map": "/ride-ui-kit/static/css/main.5e32c2a8.css.map",
+    "main.e4fa787b.js.map": "/ride-ui-kit/static/js/main.e4fa787b.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bfa5c8a.css",
-    "static/js/main.b982b184.js"
+    "static/css/main.5e32c2a8.css",
+    "static/js/main.e4fa787b.js"
   ]
 }
