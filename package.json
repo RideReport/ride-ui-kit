@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./scripts/build.js",
-    "watch": "npm-watch"
+    "watch": "npm-watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d demo/build -e demo"
   },
   "watch": {
     "build": {
@@ -25,10 +27,11 @@
   "bugs": {
     "url": "https://github.com/RideReport/ride-ui-kit/issues"
   },
-  "homepage": "https://github.com/RideReport/ride-ui-kit#readme",
+  "homepage": "https://github.com/RideReport/ride-ui-kit/demo",
   "devDependencies": {
     "@types/react": "^18.0.9",
     "@types/uuid": "^8.3.4",
+    "gh-pages": "^4.0.0",
     "npm-watch": "^0.11.0",
     "react": "^18.1.0",
     "sass": "^1.52.1",
