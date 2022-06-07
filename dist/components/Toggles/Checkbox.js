@@ -8,9 +8,7 @@ const react_1 = __importDefault(require("react"));
 const Toggle_module_scss_1 = __importDefault(require("./Toggle.module.scss"));
 const uuid_1 = require("uuid");
 const Icon_1 = __importDefault(require("../Icons/Icon"));
-/**
- * A pretty checkbox
- */
+/** A common checkbox */
 function Checkbox({ checked, disabled, onChange, label, ariaLabel, color, }) {
     // Generate a unique id for matching the input and label
     const id = (0, uuid_1.v4)();

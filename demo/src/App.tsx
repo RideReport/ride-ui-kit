@@ -1,15 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
-import { Button } from "ride-ui-kit";
-import { Checkbox } from "ride-ui-kit";
-import { Icon } from "ride-ui-kit";
-import { Toggle } from "ride-ui-kit";
+import { Button, Checkbox, Icon, Toggle } from "ride-ui-kit";
 
 import logo from "ride-ui-kit/dist/assets/logo.svg";
+import RRlogo from "ride-ui-kit/dist/assets/ride_report.png";
 
 function App() {
   const [demoToggle, setDemoToggle] = useState(false);
-  // const [vehicleType, setVehicleType] = useState("bike");
   return (
     <div className={"App"}>
       <div className="container">
@@ -22,7 +19,16 @@ function App() {
           />
           <h1>Ride-UI-Kit</h1>
         </div>
-        <p>A front end component library for Ride Report</p>
+        <p>A front end component library for Ride Report.</p>
+        <p>
+          This demo site not only serves as live documentation for engineers, it
+          also serves as a place to locally develop front end components in a
+          React application. See the{" "}
+          <a href={"https://github.com/RideReport/ride-ui-kit"}>
+            documentation
+          </a>{" "}
+          to start developing.
+        </p>
         <h2 className="section-header">Buttons</h2>
         <div className={"section-flex"}>
           <Button
@@ -37,7 +43,7 @@ function App() {
             color={"gray"}
             onClick={() => console.log("button pressed")}
           >
-            W/ Icon
+            Icon
           </Button>
           <Button color={"blue"} onClick={() => console.log("button pressed")}>
             Blue Button
@@ -49,7 +55,7 @@ function App() {
             color={"outline-red"}
             onClick={() => console.log("button pressed")}
           >
-            Outine Red Button
+            Outline Red
           </Button>
         </div>
         <h2 className="section-header">Toggles</h2>
@@ -57,7 +63,7 @@ function App() {
           <Toggle
             checked={demoToggle}
             onChange={() => setDemoToggle(!demoToggle)}
-            label={demoToggle ? "on" : "off"}
+            label={demoToggle ? "On" : "Off"}
           />
           <Toggle
             checked={false}
@@ -69,23 +75,48 @@ function App() {
             checked={demoToggle}
             onChange={() => setDemoToggle(!demoToggle)}
             label={"Checkbox"}
+            color={"#ff851a"}
           />
         </div>
         <h2 className="section-header">Charts</h2>
-        We use recharts (add documention link) as our main charting library. It
-        accepts the data format:
-        <hr />
-        <code>add demo json here</code>
-        <h3>simple line chart</h3>
-        <p>Add a chart here</p>
-        <h3>simple bar chart</h3>
-        <p>Add a chart here</p>
-        <h2 className="section-header">Fonts</h2>
-        set the font for a new react project by importing the font asset from
-        the kit.
-        <code>
-          <p>write code as string here</p>
-        </code>
+        <span>
+          We use <a href={"https://recharts.org/en-US/"}>ReCharts</a> as our
+          main charting library. It accepts data in the format:
+        </span>
+        <div className="section-code">
+          <code>add example data here</code>
+        </div>
+        <h3>Simple line chart</h3>
+        <div className="section-code">
+          <code>wip</code>
+        </div>
+        <h3>Simple bar chart</h3>
+        <div className="section-code">
+          <code>wip</code>
+        </div>
+        <h2 className="section-header">Fonts & Assets</h2>
+        <p>
+          Set the font for a new react project by importing the font asset from
+          the kit.
+        </p>
+        <p>
+          Import common assets by providing the path to the assets folder in the
+          component library
+        </p>
+        <strong>Example:</strong>
+        <div className="section-code">
+          <code>
+            import RRlogo from "ride-ui-kit/dist/assets/ride_report.png"
+          </code>
+        </div>
+        <div>
+          <img
+            alt="Ride Report"
+            src={RRlogo}
+            className="logo full"
+            style={{ height: "48px" }} //Why is this huge gap to the right of the logo here
+          />
+        </div>
         <h2 className="section-header">Icons</h2>
         <div className={"section-icons"}>
           {IconNames.map((name) => {
@@ -96,6 +127,7 @@ function App() {
             );
           })}
         </div>
+        <h2 className="section-header">Overriding Styles</h2>
       </div>
     </div>
   );

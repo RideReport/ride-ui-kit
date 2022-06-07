@@ -8,13 +8,13 @@ type CheckboxProps = {
   disabled?: boolean;
   onChange: (value: boolean) => void;
   label?: React.ReactNode;
+  /** provide an accessible name for an element. */
   ariaLabel?: string;
+  /** change the color eg: #f2f2f2 */
   color?: string;
 };
 
-/**
- * A pretty checkbox
- */
+/** A common checkbox */
 export function Checkbox({
   checked,
   disabled,
