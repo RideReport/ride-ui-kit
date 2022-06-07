@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('PT Mono'), local('PT-Mono'),
-      url(./../node_modules/ride-ui-kit/dist/assets/fonts/PTMono-Regular.woff2) format('woff2'),
-      url(./../node_modules/ride-ui-kit/dist/assets/fonts/PTMono-Regular.woff) format('woff');
+      url(./../node_modules/ride-ui-kit/dist/public/assets/fonts/PTMono-Regular.woff2) format('woff2'),
+      url(./../node_modules/ride-ui-kit/dist/public/assets/fonts/PTMono-Regular.woff) format('woff');
 }
 
 body {

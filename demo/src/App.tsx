@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./App.css";
 import { Button, Checkbox, Icon, Toggle } from "ride-ui-kit";
 
-import logo from "ride-ui-kit/dist/assets/logo.svg";
-import RRlogo from "ride-ui-kit/dist/assets/ride_report.png";
+import logo from "ride-ui-kit/dist/public/assets/logo.svg";
+import RRlogo from "ride-ui-kit/dist/public/assets/ride_report.png";
 
 function App() {
   const [demoToggle, setDemoToggle] = useState(false);
