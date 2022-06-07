@@ -2913,10 +2913,8 @@ function Icon({ icon, style, className = "" }) {
 }
 
 /** A common button */
-const Button = React.forwardRef(({ children, onClick, color = "blue", 
-// className,
-disabled = false, loading = false, center = false, iconPosition = "left", icon, style, type = "button", }, ref) => {
-    return (React.createElement("button", { type: type, ref: ref, onClick: onClick, disabled: disabled || loading, className: cx(styles$2.button, styles$2[color], iconPosition && styles$2[iconPosition], center && styles$2.center), style: style },
+const Button = React.forwardRef(({ children, onClick, color = "blue", className, disabled = false, loading = false, center = false, iconPosition = "left", icon, style, type = "button", }, ref) => {
+    return (React.createElement("button", { type: type, ref: ref, onClick: onClick, disabled: disabled || loading, className: cx(className, styles$2.button, styles$2[color], iconPosition && styles$2[iconPosition], center && styles$2.center), style: style },
         icon ? React.createElement(Icon, { icon: icon }) : null,
         children ? React.createElement("span", null, children) : null));
 });
