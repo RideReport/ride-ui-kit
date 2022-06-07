@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ride-ui-kit/static/css/main.d6be4351.css",
+    "main.js": "/ride-ui-kit/static/js/main.ca6b7335.js",
+    "static/media/icons.svg": "/ride-ui-kit/static/media/icons.1d18224125a98f1314349414e8c8030b.svg",
+    "static/media/PTMono-Regular.woff": "/ride-ui-kit/static/media/PTMono-Regular.b7423ac47c4163445b22.woff",
+    "static/media/PTMono-Regular.woff2": "/ride-ui-kit/static/media/PTMono-Regular.0ff167fdc7ea29db9043.woff2",
+    "static/media/logo.svg": "/ride-ui-kit/static/media/logo.7fefac84b046a4e34dbf1491d0955994.svg",
+    "index.html": "/ride-ui-kit/index.html",
+    "main.d6be4351.css.map": "/ride-ui-kit/static/css/main.d6be4351.css.map",
+    "main.ca6b7335.js.map": "/ride-ui-kit/static/js/main.ca6b7335.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6be4351.css",
+    "static/js/main.ca6b7335.js"
+  ]
+}
