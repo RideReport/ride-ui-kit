@@ -34,7 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       onClick,
       color = "blue",
-      className,
+      // className,
       disabled = false,
       loading = false,
       center = false,
@@ -52,7 +52,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         onClick={onClick}
         disabled={disabled || loading}
         className={cx(
-          className,
           styles.button,
           styles[color],
           iconPosition && styles[iconPosition],
