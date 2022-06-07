@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 as uuid4 } from "uuid";
-import styles from "./Toggle.scss";
+import styles from "./Toggle.module.scss";
 import cx from "classnames";
 
 type ToggleProps = {

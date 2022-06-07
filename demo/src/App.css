@@ -26,3 +26,14 @@
   display: flex;
   justify-content: space-around;
 }
+
+.section-icons {
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.section-code {
+  margin: 16px 0;
+}

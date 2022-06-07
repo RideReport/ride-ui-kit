@@ -1,0 +1,10 @@
+@import "./../../assets/styles/variables.scss";
+
+.icon {
+    height: 16rem;
+    width: 16rem;
+    fill: currentColor;
+    &.half {
+        width: 8rem;
+    }
+}

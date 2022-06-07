@@ -1,7 +1,7 @@
 import React from "react";
 import icons from "./../../assets/svgs/icons.svg";
 import cx from "classnames";
-import styles from "./icon.scss";
+import styles from "./icon.module.scss";
 
 /** A string enum of all the icons that exist. */
 export type IconName =
@@ -142,8 +142,6 @@ const HALF_ICONS: IconName[] = [
  * determined by the parent's font size, and the color by the font color.
  */
 function Icon({ icon, style, className = "" }: Props) {
-  console.log(`${icons}#icon-${icon}`);
-  console.log(`svg contents: ${icons}`);
   return (
     <svg
       className={cx(styles.icon, className, {

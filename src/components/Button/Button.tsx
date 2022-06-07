@@ -34,7 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       onClick,
       color = "blue",
-      // className = BUTTON,
+      // className,
       disabled = false,
       loading = false,
       center = false,

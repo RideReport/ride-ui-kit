@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 700;
   src: local('PT Mono'), local('PT-Mono'),
-      url(./../node_modules/ride-ui-kit/dist/public/assets/fonts/PTMono-Regular.woff2) format('woff2'),
-      url(./../node_modules/ride-ui-kit/dist/public/assets/fonts/PTMono-Regular.woff) format('woff');
+      url(./../node_modules/ride-ui-kit/dist/assets/fonts/PTMono-Regular.woff2) format('woff2'),
+      url(./../node_modules/ride-ui-kit/dist/assets/fonts/PTMono-Regular.woff) format('woff');
 }
 
 body {
@@ -12,11 +12,19 @@ body {
   font-family: Work Sans, 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 16rem;
+  line-height: 24rem;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  color: crimson;
+  background-color: #f1f1f1;
+  padding: 2rem;
+  font-size: 105%;
+}
+
+html {
+  font-size: 1px
 }
