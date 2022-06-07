@@ -63,17 +63,17 @@ default styles, including for :focus, :hover, :checked, :disabled states.
         display: flex;
         align-items: center;
         justify-content: center;
-        border-radius: 4px;
+        border-radius: 4rem;
         background-color: $white;
-        border: 1px solid $inactive-toggle;
-        font-size: 20px;
-        margin-right: 8px;
+        border: 1rem solid $inactive-toggle;
+        font-size: 20rem;
+        margin-right: 8rem;
     }
     &:not(:disabled) {
         &:hover,
         &:focus {
             &#{$location-from-input} {
-                box-shadow: 0px 0px 4px $hover-toggle;
+                box-shadow: 0rem 0rem 4rem $hover-toggle;
             }
             &:not(:checked)#{$location-from-input} {
                 border-color: $hover-toggle;
@@ -94,14 +94,14 @@ default styles, including for :focus, :hover, :checked, :disabled states.
     @include toggle-defaults(' + label:before');
     & + label:before {
         content: '';
-        width: 40px;
-        height: 24px;
-        border-radius: 64px;
+        width: 40rem;
+        height: 24rem;
+        border-radius: 64rem;
         margin-right: 0;
     }
     &.label {
         & + label:before {
-            margin-right: 8px;
+            margin-right: 8rem;
             color: blue;
         }
         &:not(:checked) {
@@ -113,17 +113,17 @@ default styles, including for :focus, :hover, :checked, :disabled states.
     $knob-path: ' + label:after';
     &#{$knob-path} {
         content: '';
-        height: 16px;
-        width: 16px;
+        height: 16rem;
+        width: 16rem;
         position: absolute;
-        border-radius: 32px;
-        left: 4px;
-        top: calc(50% - 8px);
+        border-radius: 32rem;
+        left: 4rem;
+        top: calc(50% - 8rem);
         background-color: $inactive-toggle;
         transition: 150ms all;
     }
     &:checked#{$knob-path} {
-        left: 18px;
+        left: 18rem;
         background-color: $white;
     }
     &:not(:disabled):not(:checked) {
@@ -145,8 +145,8 @@ default styles, including for :focus, :hover, :checked, :disabled states.
     @include toggle-defaults($checkbox-path);
 
     &#{$checkbox-path} {
-        width: 20px;
-        height: 20px;
+        width: 20rem;
+        height: 20rem;
         svg {
             color: white;
         }

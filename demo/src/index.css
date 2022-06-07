@@ -12,8 +12,8 @@ body {
   font-family: Work Sans, 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 16rem;
+  line-height: 24rem;
 }
 
 code {
@@ -21,6 +21,10 @@ code {
     monospace;
   color: crimson;
   background-color: #f1f1f1;
-  padding: 2px;
+  padding: 2rem;
   font-size: 105%;
+}
+
+html {
+  font-size: 1px
 }

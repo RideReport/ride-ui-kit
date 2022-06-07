@@ -119,10 +119,10 @@ function App() {
         </div>
         <h2 className="section-header">Icons</h2>
         <div className={"section-icons"}>
-          {IconNames.map((name) => {
+          {IconNames.map((name, i) => {
             return (
               <div>
-                <Icon icon={name} /> {name}
+                <Icon key={i} icon={name} /> {name}
               </div>
             );
           })}
