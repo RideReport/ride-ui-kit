@@ -121,10 +121,13 @@ will this actually work?
 
 `npm version patch`
 
-Git Subtrees are used to set the root folder for github pages to the subdirectory demo app. To update the page run this in the root terminal.
+Git Subtrees are used to set the root folder for github pages to the subdirectory demo app. It then uses the /build of demo as the source to run and execute it in the browser.
 
-`` git push origin `git subtree split --prefix demo`:gh-pages --force ``
+make sure you build and push the react demo app,
+Then to update the github page run this in the root terminal.
 
-Eventually this step will be scripted.
+`` git push origin `git subtree split --prefix demo/build`:gh-pages --force  ``
+
+\*Eventually this step will be scripted.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
