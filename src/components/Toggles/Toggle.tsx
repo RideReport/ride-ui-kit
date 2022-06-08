@@ -1,6 +1,6 @@
 import React from "react";
 import { v4 as uuid4 } from "uuid";
-import styles from "./Toggle.module.scss";
+import "./Toggle.scss";
 import cx from "classnames";
 
 type ToggleProps = {
@@ -28,8 +28,6 @@ export function Toggle({
 }: ToggleProps) {
   // Generate a unique id for matching the input and label
 
-  // NOTE -> REMOVING USE OF USEMEMO FOR ERRORS
-  //   const id = useMemo(uuid4, []);
   const id = uuid4();
 
   // const [tippy] = useTippy<HTMLDivElement>(tooltipLabel ?? null, {
@@ -47,7 +45,7 @@ export function Toggle({
       }
     >
       <input
-        className={cx(styles.toggle, label && styles.label)}
+        className={cx("toggle", label && "label")}
         type="checkbox"
         id={id}
         checked={checked}

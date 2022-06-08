@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
 const icons_svg_1 = __importDefault(require("./../../assets/svgs/icons.svg"));
 const classnames_1 = __importDefault(require("classnames"));
-const icon_module_scss_1 = __importDefault(require("./icon.module.scss"));
+require("./icon.scss");
 const HALF_ICONS = [
     "Battery-0-33",
     "Battery-33-66",
@@ -18,7 +18,7 @@ const HALF_ICONS = [
  * determined by the parent's font size, and the color by the font color.
  */
 function Icon({ icon, style, className = "" }) {
-    return (react_1.default.createElement("svg", { className: (0, classnames_1.default)(icon_module_scss_1.default.icon, className, {
+    return (react_1.default.createElement("svg", { className: (0, classnames_1.default)("icon", className, {
             half: HALF_ICONS.includes(icon),
         }), style: style },
         react_1.default.createElement("use", { xlinkHref: `${icons_svg_1.default}#icon-${icon}` })));

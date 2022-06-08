@@ -1,4 +1,5 @@
 /// <reference types="react" />
+import "./Toggle.scss";
 declare type ToggleProps = {
     checked: boolean;
     disabled?: boolean;

@@ -1,4 +1,5 @@
 import React from "react";
+import "./Toggle.scss";
 declare type CheckboxProps = {
     checked: boolean;
     disabled?: boolean;

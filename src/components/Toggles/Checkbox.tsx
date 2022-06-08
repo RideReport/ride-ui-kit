@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Toggle.module.scss";
+import "./Toggle.scss";
 import { v4 as uuid4 } from "uuid";
 import Icon from "../Icons/Icon";
 
@@ -27,7 +27,7 @@ export function Checkbox({
   const id = uuid4();
   return (
     <div
-      className={styles["checkbox-wrapper"]}
+      className={"checkbox-wrapper"}
       style={
         color
           ? ({
@@ -39,7 +39,7 @@ export function Checkbox({
       }
     >
       <input
-        className={styles.checkbox}
+        className={"checkbox"}
         type="checkbox"
         id={id}
         checked={checked}
