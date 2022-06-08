@@ -12,14 +12,14 @@ const Icon_1 = __importDefault(require("../Icons/Icon"));
 function Checkbox({ checked, disabled, onChange, label, ariaLabel, color, }) {
     // Generate a unique id for matching the input and label
     const id = (0, uuid_1.v4)();
-    return (react_1.default.createElement("div", { className: "checkbox-wrapper", style: color
+    return (react_1.default.createElement("div", { className: "ride-ui-kit-toggle-checkbox-wrapper", style: color
             ? {
                 "--ride-report-inactive-toggle-color": color,
                 "--ride-report-active-toggle-color": color,
                 "--ride-report-hover-toggle-color": color,
             } // css variables aren't included in CSSProperties by default
             : undefined },
-        react_1.default.createElement("input", { className: "checkbox", type: "checkbox", id: id, checked: checked, onChange: (e) => onChange(e.target.checked), disabled: disabled }),
+        react_1.default.createElement("input", { className: "ride-ui-kit-toggle-checkbox", type: "checkbox", id: id, checked: checked, onChange: (e) => onChange(e.target.checked), disabled: disabled }),
         react_1.default.createElement("label", { "aria-label": ariaLabel, htmlFor: id },
             react_1.default.createElement("div", null,
                 react_1.default.createElement(Icon_1.default, { icon: "Check" })),

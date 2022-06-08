@@ -18,7 +18,7 @@ const HALF_ICONS = [
  * determined by the parent's font size, and the color by the font color.
  */
 function Icon({ icon, style, className = "" }) {
-    return (react_1.default.createElement("svg", { className: (0, classnames_1.default)("icon", className, {
+    return (react_1.default.createElement("svg", { className: (0, classnames_1.default)("ride-ui-kit-icon", className, {
             half: HALF_ICONS.includes(icon),
         }), style: style },
         react_1.default.createElement("use", { xlinkHref: `${icons_svg_1.default}#icon-${icon}` })));

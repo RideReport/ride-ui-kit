@@ -45,7 +45,9 @@ export function Toggle({
       }
     >
       <input
-        className={cx("toggle", label && "label")}
+        className={cx("ride-ui-kit-toggle", {
+          "ride-ui-kit-toggle-label": label,
+        })}
         type="checkbox"
         id={id}
         checked={checked}

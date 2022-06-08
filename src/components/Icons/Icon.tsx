@@ -144,7 +144,7 @@ const HALF_ICONS: IconName[] = [
 function Icon({ icon, style, className = "" }: Props) {
   return (
     <svg
-      className={cx("icon", className, {
+      className={cx("ride-ui-kit-icon", className, {
         half: HALF_ICONS.includes(icon),
       })}
       style={style}

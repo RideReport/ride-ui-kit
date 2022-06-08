@@ -27,7 +27,9 @@ color, label = "", }) {
             "--ride-report-hover-toggle-color": color,
         } // css variables aren't included in CSSProperties by default
      },
-        react_1.default.createElement("input", { className: (0, classnames_1.default)("toggle", label && "label"), type: "checkbox", id: id, checked: checked, onChange: (e) => onChange(e.target.checked), disabled: disabled }),
+        react_1.default.createElement("input", { className: (0, classnames_1.default)("ride-ui-kit-toggle", {
+                "ride-ui-kit-toggle-label": label,
+            }), type: "checkbox", id: id, checked: checked, onChange: (e) => onChange(e.target.checked), disabled: disabled }),
         react_1.default.createElement("label", { htmlFor: id }, label)));
 }
 exports.Toggle = Toggle;

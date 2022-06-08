@@ -27,7 +27,7 @@ export function Checkbox({
   const id = uuid4();
   return (
     <div
-      className={"checkbox-wrapper"}
+      className={"ride-ui-kit-toggle-checkbox-wrapper"}
       style={
         color
           ? ({
@@ -39,7 +39,7 @@ export function Checkbox({
       }
     >
       <input
-        className={"checkbox"}
+        className={"ride-ui-kit-toggle-checkbox"}
         type="checkbox"
         id={id}
         checked={checked}

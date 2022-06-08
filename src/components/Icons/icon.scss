@@ -1,0 +1,10 @@
+@import "./../../assets/styles/variables.scss";
+
+.ride-ui-kit-icon {
+    height: 1em;
+    width: 1em;
+    fill: currentColor;
+    &.half {
+        width: .5em;
+    }
+}

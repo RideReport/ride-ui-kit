@@ -95,13 +95,15 @@ Developing new components from within this repository is different than the aver
 
 3. from within `demo` you can use `app.tsx` to render and test components as if they were in a live react project.
 
+Alternative: It is possible to develop the library local within a Ride Report React Repo (scooter-map-frontend or the ODP). from the ride-ui-kit root, run `npm link` in the terminal. Then in the front end project that imports the library run `npm link ride-ui-kit`.
+
 Now every time you make changes from within the component library it should be automatically rebundled and reflected in the `demo` app.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
-### Shipping Changes (WIP)
+### Shipping Changes (to be discovered)
 
 After changes have shipped to ride-ui-kit. All react repositories that consume and rely on the the component library need to be updated with the latest version. To update to the most recent version on the component library run:
 

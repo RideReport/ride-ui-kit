@@ -34,7 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       children,
       onClick,
       color = "blue",
-      className,
+      className = "ride-ui-kit-button",
       disabled = false,
       loading = false,
       center = false,
@@ -51,13 +51,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         onClick={onClick}
         disabled={disabled || loading}
-        className={cx(
-          "ride-ui-kit-button",
-          color,
-          iconPosition,
-          center,
-          className
-        )}
+        className={cx(className, color, iconPosition, center)}
         style={style}
       >
         {/* <Loading loading={loading} kind="blue" size={2} /> */}
