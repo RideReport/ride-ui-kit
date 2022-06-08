@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Button.scss";
+import "./Button.scss";
 import cx from "classnames";
 import Icon, { IconName } from "../Icons/Icon";
 
@@ -52,16 +52,16 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         onClick={onClick}
         disabled={disabled || loading}
         className={cx(
-          styles.button,
-          styles[color],
-          iconPosition && styles[iconPosition],
-          center && styles.center
+          "ride-ui-kit-button"
+          // styles[color],
+          // iconPosition && styles[iconPosition],
+          // center && styles.center
         )}
         style={style}
       >
         {/* <Loading loading={loading} kind="blue" size={2} /> */}
         {icon ? <Icon icon={icon} /> : null}
-        {children ? <span>{children}</span> : null}
+        {children ? <span>{children}yayyyy</span> : null}
       </button>
     );
   }

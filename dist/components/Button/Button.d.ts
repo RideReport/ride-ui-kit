@@ -1,4 +1,5 @@
 import React from "react";
+import "./Button.scss";
 import { IconName } from "../Icons/Icon";
 export declare type ButtonProps = {
     /** What text to render inside the button */
