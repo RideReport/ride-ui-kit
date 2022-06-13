@@ -4,6 +4,7 @@ import { Button, Checkbox, Icon, Toggle } from "ride-ui-kit";
 
 import logo from "ride-ui-kit/dist/assets/logo.svg";
 import RRlogo from "ride-ui-kit/dist/assets/ride_report.png";
+import { TabToggle } from "ride-ui-kit";
 
 function App() {
   const [demoToggle, setDemoToggle] = useState(false);
@@ -30,6 +31,7 @@ function App() {
           to start developing.
         </p>
         <h2 className="section-header">Buttons</h2>
+        {/* <div><Loading loading={true} kind="blue" size={2} /></div> */}
         <div className={"section-flex"}>
           <Button
             disabled
@@ -76,6 +78,14 @@ function App() {
             onChange={() => setDemoToggle(!demoToggle)}
             label={"Checkbox"}
             color={"#ff851a"}
+          />
+          <TabToggle
+            checked={demoToggle}
+            onChange={() => setDemoToggle(!demoToggle)}
+            label={"demo:"}
+            tabLabels={["left option", "right option"]}
+            // className={TOGGLE_LABEL}
+            tiny
           />
         </div>
         <h2 className="section-header">Charts</h2>

@@ -2,6 +2,8 @@ import React from "react";
 import "./Button.scss";
 import cx from "classnames";
 import Icon, { IconName } from "../Icons/Icon";
+import Loading from "../Loading/Loading";
+// import Loading from "../Loading/Loading";
 
 export type ButtonProps = {
   /** What text to render inside the button */
@@ -54,7 +56,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         className={cx(className, color, iconPosition, center)}
         style={style}
       >
-        {/* <Loading loading={loading} kind="blue" size={2} /> */}
+        <Loading loading={loading} kind="blue" size={2} />
         {icon ? <Icon icon={icon} /> : null}
         {children ? <span>{children}</span> : null}
       </button>

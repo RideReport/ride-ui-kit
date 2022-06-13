@@ -156,6 +156,82 @@ default styles, including for :focus, :hover, :checked, :disabled states.
         color: transparent;
     }
 }
+
 .ride-ui-kit-toggle-checkbox-wrapper {
+    position: relative;
+}
+
+.ride-ui-kit-tab-toggle {
+    $toggle-path: ' + div';
+    @include toggle-defaults($toggle-path);
+
+    &#{$toggle-path} {
+        height: 36rem;
+        width: 100%;
+        position: relative;
+        border-radius: 6rem;
+        padding: 3rem;
+        @include text-body-link;
+        background-color: $gray-30;
+        border-color: transparent;
+        color: $gray-60;
+        cursor: pointer;
+        & > span {
+            width: 50%;
+            text-align: center;
+            z-index: 1;
+            pointer-events: none;
+            transition: color 200ms ease-in-out;
+            padding: 3rem;
+            &.active {
+                color: $gray-90;
+            }
+        }
+        &.tiny{
+            @include text-body-tiny;
+        }
+    }
+    &:not(:disabled) {
+        &:hover,
+        &:focus {
+            &:not(:checked)#{$toggle-path} {
+                border-color: transparent;
+            }
+        }
+    }
+    &:checked#{$toggle-path} {
+        background-color: $gray-30;
+    }
+    &:disabled#{$toggle-path} {
+        background-color: $gray-30;
+    }
+
+    &#{$toggle-path} > div.slider {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        margin: 3rem;
+        width: 50%;
+        background-color: $white;
+        border-color: transparent;
+        border-radius: 3rem;
+        box-shadow: 0rem 1rem 4rem rgba(0, 0, 0, 0.1), 0rem 4rem 8rem rgba(0, 0, 0, 0.12);
+        transition: transform 200ms ease-in-out;
+
+        &.right {
+            transform: translateX(calc(100% - 6rem))
+        }
+        &.tiny {
+            transform: translateX(calc(100% - 4rem))
+        }
+        &.disabled {
+            background-color: $gray-10;
+            box-shadow: none;
+        }
+    }
+}
+
+.ride-ui-kit-tab-toggle-label {
     position: relative;
 }
