@@ -2,8 +2,7 @@ import React from "react";
 import "./Button.scss";
 import cx from "classnames";
 import Icon, { IconName } from "../Icons/Icon";
-import Loading from "../Loading/Loading";
-// import Loading from "../Loading/Loading";
+import Loading from "../Loading";
 
 export type ButtonProps = {
   /** What text to render inside the button */
