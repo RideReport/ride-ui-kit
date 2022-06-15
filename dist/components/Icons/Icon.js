@@ -4,7 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const react_1 = __importDefault(require("react"));
-const icons_svg_1 = __importDefault(require("./../../assets/svgs/icons.svg"));
+const icons_svg_1 = __importDefault(require("../../assets/svgs/icons.svg"));
 const classnames_1 = __importDefault(require("classnames"));
 require("./icon.scss");
 const HALF_ICONS = [
