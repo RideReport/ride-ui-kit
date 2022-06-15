@@ -4,7 +4,6 @@ import { Button, Checkbox, Icon, Toggle } from "ride-ui-kit";
 
 import logo from "ride-ui-kit/dist/assets/logo.svg";
 import RRlogo from "ride-ui-kit/dist/assets/ride_report.png";
-import { TabToggle } from "ride-ui-kit";
 
 function App() {
   const [demoToggle, setDemoToggle] = useState(false);
@@ -59,6 +58,9 @@ function App() {
           >
             Outline Red
           </Button>
+          <Button onClick={() => console.log("button pressed")} loading>
+            Loading
+          </Button>
         </div>
         <h2 className="section-header">Toggles</h2>
         <div className={"section-flex"}>
@@ -78,14 +80,6 @@ function App() {
             onChange={() => setDemoToggle(!demoToggle)}
             label={"Checkbox"}
             color={"#ff851a"}
-          />
-          <TabToggle
-            checked={demoToggle}
-            onChange={() => setDemoToggle(!demoToggle)}
-            label={"demo:"}
-            tabLabels={["left option", "right option"]}
-            // className={TOGGLE_LABEL}
-            tiny
           />
         </div>
         <h2 className="section-header">Charts</h2>
