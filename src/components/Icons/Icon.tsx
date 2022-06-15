@@ -1,5 +1,5 @@
 import React from "react";
-import icons from "./../../assets/svgs/icons.svg";
+import icons from "../../assets/svgs/icons.svg";
 import cx from "classnames";
 import "./icon.scss";
 
@@ -97,6 +97,7 @@ export type IconName =
   | "List-File"
   | "Document-Agreement"
   | "Document-Privacy"
+  | "User"
   | "User-Remove"
   | "Spreadsheet"
   | "Archive"
