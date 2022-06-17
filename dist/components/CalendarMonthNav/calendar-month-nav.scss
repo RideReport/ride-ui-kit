@@ -1,0 +1,40 @@
+@import "../../assets/styles/variables.scss";
+
+
+.ride-ui-kit-calendar-month-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem;
+}
+
+.ride-ui-kit-calendar-month-nav-link {
+    @include transition;
+    @include text-label;
+    border-radius: 6rem;
+    width: 32rem;
+    height: 32rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1rem solid $gray-30;
+    box-sizing: border-box;
+    color: $gray-70;
+    font-size: 20rem;
+    opacity: 0;
+    cursor: default;
+    &:not(:disabled) {
+        opacity: 1;
+        @include shadow-2;
+        &:hover {
+            @include shadow-hover;
+        }
+    }
+}
+
+.ride-ui-kit-calendar-month-nav-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 8rem;
+}

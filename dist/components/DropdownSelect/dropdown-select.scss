@@ -1,0 +1,30 @@
+@import "../../assets/styles/variables";
+
+.ride-ui-kit-dropdown-select-input {
+    height: 36rem;
+    min-width: 144rem;
+    border-radius: 6rem;
+    box-sizing: border-box;
+    padding: 6rem;
+    padding-left: 36rem;
+    position: relative;
+    @include link-border;
+    transition: 150ms all;
+    white-space: nowrap;
+    background-color: $white;
+    svg {
+        position: absolute;
+        font-size: 24rem;
+        top: calc(50% - 24rem / 2);
+        left: 7rem;
+        pointer-events: none;
+        color: $blue-50;
+        transition: 150ms all;
+    }
+    &:disabled {
+        color: $gray-30;
+        svg {
+            color: $gray-30;
+        }
+    }
+}

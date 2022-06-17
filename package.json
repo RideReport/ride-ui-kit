@@ -39,14 +39,18 @@
     },
     "peerDependencies": {
         "react": "^16.13.1",
-        "react-dom": "^16.13.1"
+        "react-dom": "^16.13.1",
+        "react-intl": "^4.3.1"
     },
     "engines": {
         "npm": ">=7.0.0",
         "node": ">=16.0.0"
     },
     "dependencies": {
+        "@ridereport/localdate": "^1.0.2",
+        "@types/react-transition-group": "^4.4.0",
         "classnames": "^2.3.1",
+        "react-transition-group": "^4.4.0",
         "recursive-copy": "^2.0.14",
         "uuid": "^8.3.2"
     }

@@ -1,0 +1,37 @@
+@import "../../assets/styles/variables";
+
+.ride-ui-kit-dropdown-wrapper {
+    position: relative;
+    display: grid;
+
+    pointer-events: auto;
+}
+
+.ride-ui-kit-dropdown {
+    border-radius: 6rem;
+    padding: 8rem;
+    position: absolute;
+    z-index: 11;
+    background-color: $white;
+    @include shadow-8;
+    transition-property: opacity;
+    transition-duration: 100ms;
+    &.enter-active, &.exit {
+        opacity: 1;
+    }
+    &.enter, &.exit-active {
+        opacity: 0;
+    }
+    &.exit {
+        transition-duration: 200ms;
+        pointer-events: none;
+    }
+    &.bottom-left {
+        top: calc(100% + 8rem);
+        left: 0;
+    }
+    &.bottom-right {
+        top: calc(100% + 8rem);
+        right: 0;
+    }
+}

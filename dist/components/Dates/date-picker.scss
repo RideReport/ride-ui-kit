@@ -1,0 +1,46 @@
+@import "../../assets/styles/variables";
+
+.ride-ui-kit-date-buttons {
+    margin-top: 16rem;
+    margin-bottom: 16rem;
+    display: flex;
+    gap: 16rem;
+    flex-wrap: wrap;
+
+    button {
+        color: $gray-70;
+    }
+}
+
+
+/* Shared container styles for the DatePicker and DateButton combo  */
+export .ride-ui-kit-date-picker-container {
+    display: flex;
+    flex-flow: row nowrap;
+    > * {
+        flex: 1 0 auto;
+        margin: 8rem 8rem 0 0;
+    }
+    > button {
+        flex: 0 0 auto;
+    }
+    margin: -8rem -8rem 0 0;
+}
+
+.ride-ui-kit-date-text-only {
+    display: flex;
+    align-items: center;
+    padding: 6rem;
+    padding-left: 36rem;
+    position: relative;
+    white-space: nowrap;
+    svg {
+        position: absolute;
+        font-size: 24rem;
+        top: calc(50% - 24rem / 2);
+        left: 7rem;
+        pointer-events: none;
+        color: $blue-50;
+    }
+}
+

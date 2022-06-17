@@ -1,0 +1,152 @@
+@import "../../assets/styles/variables";
+
+@mixin calendar-cell {
+    width: 32rem;
+    height: 32rem;
+    @include text-label-bold;
+    color: $gray-90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+@mixin preliminary-dot {
+    content: '';
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: $yellow-50;
+    border: 2rem solid $white;
+}
+
+@mixin calendar {
+    .outside {
+        color: $gray-60;
+        @content;
+    }
+    .missing,
+    .missing * {
+        color: $gray-50;
+        font-size: 20rem;
+        .outside,
+        &.outside {
+            color: $gray-30;
+            * {
+                color: $gray-30;
+            }
+        }
+    }
+    .disabled,
+    .disabled *,
+    :disabled,
+    :disabled * {
+        color: $gray-30;
+        cursor: default;
+    }
+    .active,
+    .active * {
+        background-color: $blue-50;
+        color: $white;
+        cursor: default;
+    }
+    .preliminary {
+        position: relative;
+        &:after {
+            right: -2rem;
+            top: -2rem;
+            @include preliminary-dot;
+        }
+    }
+
+    a:not(.active):not(.disabled):hover,
+    a:not(.active):not(.disabled):hover *,
+    button:not(.active):not(:disabled):hover,
+    button:not(.active):not(:disabled):hover * {
+        background-color: $gray-30;
+    }
+}
+
+@mixin calendar-wrapper {
+    padding: 5rem;
+    margin-top: 6rem;
+    position: relative;
+}
+
+@mixin calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 32rem);
+    grid-row-gap: 10rem;
+    grid-column-gap: 10rem;
+}
+
+.ride-ui-kit-date-range-picker-weekday-cell {
+    @include calendar-cell;
+    color: $gray-60;
+}
+
+.ride-ui-kit-date-range-picker-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.ride-ui-kit-date-range-picker-preliminary-dates {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 0 7rem;
+    svg {
+        margin-right: 8rem;
+        color: $yellow-50;
+    }
+    @include text-label;
+}
+
+.ride-ui-kit-date-range-picker-calendar {
+    &:not(:first-child) {
+        padding-left: 5rem;
+    }
+    &:not(:last-child) {
+        padding-right: 5rem;
+        border-right: 1rem solid $gray-30;
+    }
+}
+
+.ride-ui-kit-date-range-picker-calendar-grid {
+    @include calendar;
+    @include calendar-grid;
+    padding: 13rem;
+}
+.ride-ui-kit-date-range-picker-days-of-week {
+    @include calendar-grid;
+}
+.ride-ui-kit-date-range-picker-day {
+    @include calendar-cell;
+}
+.ride-ui-kit-date-range-picker-selected {
+    margin: 0 -5rem;
+    background-color: $gray-30;
+    &.left {
+        margin-left: 0;
+        border-top-left-radius: 16rem;
+        border-bottom-left-radius: 16rem;
+    }
+    &.right {
+        margin-right: 0;
+        border-top-right-radius: 16rem;
+        border-bottom-right-radius: 16rem;
+    }
+    &.continue-right, &.continue-left {
+        border-radius: 0;
+    }
+    @mixin continue-gradient($direction) {
+        background: linear-gradient(to $direction, $gray-30, fade-out($gray-30, 1));
+    }
+    &.continue-left {
+        @include continue-gradient(left);
+    }
+    &.continue-right {
+        @include continue-gradient(right);
+    }
+}
