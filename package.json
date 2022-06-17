@@ -1,53 +1,53 @@
 {
-  "name": "ride-ui-kit",
-  "version": "1.1.2",
-  "description": "A frontend component library for Ride Report",
-  "main": "dist/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./scripts/build.js",
-    "watch": "npm-watch",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d demo/build -e demo"
-  },
-  "watch": {
-    "build": {
-      "patterns": [
-        "src"
-      ],
-      "extensions": "scss, js, tsx, ts"
+    "name": "ride-ui-kit",
+    "version": "1.1.2",
+    "description": "A frontend component library for Ride Report",
+    "main": "dist/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "./scripts/build.js",
+        "watch": "npm-watch",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d demo/build -e demo"
+    },
+    "watch": {
+        "build": {
+            "patterns": [
+                "src"
+            ],
+            "extensions": "scss, js, tsx, ts"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RideReport/ride-ui-kit.git"
+    },
+    "author": "Ride Report",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RideReport/ride-ui-kit/issues"
+    },
+    "homepage": "https://github.com/RideReport/ride-ui-kit",
+    "devDependencies": {
+        "@types/node": "^17.0.42",
+        "@types/react": "^16.9.34",
+        "@types/uuid": "^8.3.4",
+        "npm-watch": "^0.11.0",
+        "sass": "^1.52.1",
+        "tslib": "^2.4.0",
+        "typescript": "^4.7.2"
+    },
+    "peerDependencies": {
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1"
+    },
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=16.0.0"
+    },
+    "dependencies": {
+        "classnames": "^2.3.1",
+        "recursive-copy": "^2.0.14",
+        "uuid": "^8.3.2"
     }
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RideReport/ride-ui-kit.git"
-  },
-  "author": "Ride Report",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/RideReport/ride-ui-kit/issues"
-  },
-  "homepage": "https://github.com/RideReport/ride-ui-kit",
-  "devDependencies": {
-    "@types/node": "^17.0.42",
-    "@types/react": "^16.9.34",
-    "@types/uuid": "^8.3.4",
-    "npm-watch": "^0.11.0",
-    "sass": "^1.52.1",
-    "tslib": "^2.4.0",
-    "typescript": "^4.7.2"
-  },
-  "peerDependencies": {
-    "react": "^18.1.0"
-  },
-  "engines": {
-    "npm": ">=7.0.0",
-    "node": ">=16.0.0"
-  },
-  "dependencies": {
-    "classnames": "^2.3.1",
-    "react": "^18.1.0",
-    "recursive-copy": "^2.0.14",
-    "uuid": "^8.3.2"
-  }
 }
